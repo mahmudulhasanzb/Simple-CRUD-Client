@@ -1,13 +1,15 @@
-import { getUserById } from '@/app/lib/data'
-import React from 'react'
+import { getUserById } from '@/app/lib/data';
+import React from 'react';
 
-const UserDetailsPage = async ({params}) => {
-  const { userId } = await params
-  const user = await getUserById(userId)
+const UserDetailsPage = async ({ params }) => {
+  const { userId } = await params;
+  const user = await getUserById(userId);
   console.log(user);
   return (
-    <div>UserDetailsPage</div>
-  )
-}
+    <div>
+      <h2>User Details: {user.name} </h2>
+    </div>
+  );
+};
 
-export default UserDetailsPage
+export default UserDetailsPage;
