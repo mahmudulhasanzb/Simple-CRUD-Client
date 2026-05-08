@@ -5,6 +5,8 @@ const UserDetailsPage = async ({ params }) => {
   const { userId } = await params;
   const user = await getUserById(userId);
   console.log(user);
+
+
   return (
     <div>
       <h2>User Details: {user.name} </h2>
